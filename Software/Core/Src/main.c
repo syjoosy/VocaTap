@@ -21,6 +21,9 @@
 #include "app_fatfs.h"
 #include "usb_device.h"
 
+#include "ssd1306.h"
+#include "ssd1306_fonts.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -104,7 +107,18 @@ int main(void)
   MX_I2C1_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+  ssd1306_Init();
 
+  ssd1306_Fill(Black);
+  ssd1306_SetCursor(2, 10);
+  ssd1306_WriteString("Hello world!", Font_6x8, White);
+  ssd1306_UpdateScreen();
+  ssd1306_SetCursor(2, 25);
+  ssd1306_WriteString("Hello world!", Font_7x10, White);
+  ssd1306_UpdateScreen();
+  ssd1306_SetCursor(2, 40);
+  ssd1306_WriteString("Hello world!", Font_11x18, White);
+  ssd1306_UpdateScreen();
   /* USER CODE END 2 */
 
   /* Infinite loop */
