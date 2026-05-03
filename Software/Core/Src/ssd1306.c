@@ -222,8 +222,8 @@ char ssd1306_WriteChar(char ch, SSD1306_Font_t Font, SSD1306_COLOR color) {
     uint32_t i, b, j;
     
     // Check if character is valid
-    if (ch < 32 || ch > 126)
-        return 0;
+    // if (ch < 32 || ch > 126)
+    //     return 0;
     
     // Char width is not equal to font width for proportional font
     const uint8_t char_width = Font.char_width ? Font.char_width[ch-32] : Font.width;
@@ -267,6 +267,102 @@ char ssd1306_WriteString(char* str, SSD1306_Font_t Font, SSD1306_COLOR color) {
     // Everything ok
     return *str;
 }
+
+// static uint32_t utf8_decode(const char **s) {
+//     const uint8_t *p = (const uint8_t*)(*s);
+//     uint32_t codepoint;
+
+//     if (p[0] < 0x80) {
+//         codepoint = p[0];
+//         *s += 1;
+//     } 
+//     else if ((p[0] & 0xE0) == 0xC0) {
+//         codepoint = ((p[0] & 0x1F) << 6) |
+//                     (p[1] & 0x3F);
+//         *s += 2;
+//     } 
+//     else if ((p[0] & 0xF0) == 0xE0) {
+//         codepoint = ((p[0] & 0x0F) << 12) |
+//                     ((p[1] & 0x3F) << 6) |
+//                     (p[2] & 0x3F);
+//         *s += 3;
+//     } 
+//     else {
+//         // не поддерживаем (4 байта и выше)
+//         *s += 1;
+//         return '?';
+//     }
+
+//     return codepoint;
+// }
+
+// static uint16_t font_get_index(uint32_t codepoint) {
+//     // ASCII
+//     if (codepoint >= 32 && codepoint <= 126) {
+//         return codepoint - 32;
+//     }
+
+//     // Кириллица А-Я
+//     if (codepoint >= 0x0410 && codepoint <= 0x042F) {
+//         return (codepoint - 0x0410) + 95;
+//     }
+
+//     // Кириллица а-я
+//     if (codepoint >= 0x0430 && codepoint <= 0x044F) {
+//         return (codepoint - 0x0430) + 127;
+//     }
+
+//     // Ё ё
+//     if (codepoint == 0x0401) return 159;
+//     if (codepoint == 0x0451) return 160;
+
+//     return 0; // неизвестный символ
+// }
+
+// char ssd1306_WriteGlyph(uint32_t codepoint, SSD1306_Font_t Font, SSD1306_COLOR color) {
+//     uint32_t i, b, j;
+
+//     uint16_t index = font_get_index(codepoint);
+
+//     const uint8_t char_width = Font.char_width ? 
+//         Font.char_width[index] : Font.width;
+
+//     if (SSD1306_WIDTH < (SSD1306.CurrentX + char_width) ||
+//         SSD1306_HEIGHT < (SSD1306.CurrentY + Font.height)) {
+//         return 0;
+//     }
+
+//     for(i = 0; i < Font.height; i++) {
+//         b = Font.data[index * Font.height + i];
+
+//         for(j = 0; j < char_width; j++) {
+//             if((b << j) & 0x8000) {
+//                 ssd1306_DrawPixel(
+//                     SSD1306.CurrentX + j,
+//                     SSD1306.CurrentY + i,
+//                     color
+//                 );
+//             } else {
+//                 ssd1306_DrawPixel(
+//                     SSD1306.CurrentX + j,
+//                     SSD1306.CurrentY + i,
+//                     !color
+//                 );
+//             }
+//         }
+//     }
+
+//     SSD1306.CurrentX += char_width;
+//     return 1;
+// }
+
+// void ssd1306_WriteStringUTF8(const char *str, SSD1306_Font_t Font, SSD1306_COLOR color) {
+//     while (*str) {
+//         uint32_t codepoint = utf8_decode(&str);
+//         ssd1306_WriteGlyph(codepoint, Font, color);
+//     }
+// }
+
 
 /* Position the cursor */
 void ssd1306_SetCursor(uint8_t x, uint8_t y) {
