@@ -107,11 +107,21 @@ int main(void)
   MX_I2C1_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+
+  W25qxx_Init();
+  
   ssd1306_Init();
 
   ssd1306_Fill(Black);
   ssd1306_SetCursor(2, 10);
-  ssd1306_WriteString("Hello world!", Font_6x8, White);
+  if (CheckW25qxxConnection() == 1)
+  {
+    ssd1306_WriteString("W25QXX OK!", Font_6x8, White);
+  }
+  else
+  {
+    ssd1306_WriteString("W25QXX ERROR!", Font_6x8, White);
+  }
   ssd1306_UpdateScreen();
   ssd1306_SetCursor(2, 25);
   ssd1306_WriteString("Hello world!", Font_7x10, White);
