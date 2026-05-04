@@ -268,101 +268,70 @@ char ssd1306_WriteString(char* str, SSD1306_Font_t Font, SSD1306_COLOR color) {
     return *str;
 }
 
-// static uint32_t utf8_decode(const char **s) {
-//     const uint8_t *p = (const uint8_t*)(*s);
-//     uint32_t codepoint;
+static uint16_t utf8_decode(const char **s) {
+    uint8_t c = (uint8_t)**s;
 
-//     if (p[0] < 0x80) {
-//         codepoint = p[0];
-//         *s += 1;
-//     } 
-//     else if ((p[0] & 0xE0) == 0xC0) {
-//         codepoint = ((p[0] & 0x1F) << 6) |
-//                     (p[1] & 0x3F);
-//         *s += 2;
-//     } 
-//     else if ((p[0] & 0xF0) == 0xE0) {
-//         codepoint = ((p[0] & 0x0F) << 12) |
-//                     ((p[1] & 0x3F) << 6) |
-//                     (p[2] & 0x3F);
-//         *s += 3;
-//     } 
-//     else {
-//         // не поддерживаем (4 байта и выше)
-//         *s += 1;
-//         return '?';
-//     }
+    if (c < 0x80) {
+        (*s)++;
+        return c;
+    }
+    else if ((c & 0xE0) == 0xC0) {
+        uint16_t res = ((c & 0x1F) << 6) |
+                       ((*s)[1] & 0x3F);
+        (*s) += 2;
+        return res;
+    }
+    else if ((c & 0xF0) == 0xE0) {
+        uint16_t res = ((c & 0x0F) << 12) |
+                       (((*s)[1] & 0x3F) << 6) |
+                       ((*s)[2] & 0x3F);
+        (*s) += 3;
+        return res;
+    }
 
-//     return codepoint;
-// }
+    // fallback
+    (*s)++;
+    return '?';
+}
 
-// static uint16_t font_get_index(uint32_t codepoint) {
-//     // ASCII
-//     if (codepoint >= 32 && codepoint <= 126) {
-//         return codepoint - 32;
-//     }
+static uint8_t unicode_to_font_index(uint16_t code) {
 
-//     // Кириллица А-Я
-//     if (codepoint >= 0x0410 && codepoint <= 0x042F) {
-//         return (codepoint - 0x0410) + 95;
-//     }
+    // ASCII
+    if (code >= 32 && code <= 126)
+        return code;
 
-//     // Кириллица а-я
-//     if (codepoint >= 0x0430 && codepoint <= 0x044F) {
-//         return (codepoint - 0x0430) + 127;
-//     }
+    // А-Я
+    if (code >= 0x0410 && code <= 0x042F)
+        return code - 0x0410 + 192; // cp1251 диапазон
 
-//     // Ё ё
-//     if (codepoint == 0x0401) return 159;
-//     if (codepoint == 0x0451) return 160;
+    // а-я
+    if (code >= 0x0430 && code <= 0x044F)
+        return code - 0x0430 + 224;
 
-//     return 0; // неизвестный символ
-// }
+    // Ё
+    if (code == 0x0401)
+        return 168;
 
-// char ssd1306_WriteGlyph(uint32_t codepoint, SSD1306_Font_t Font, SSD1306_COLOR color) {
-//     uint32_t i, b, j;
+    // ё
+    if (code == 0x0451)
+        return 184;
 
-//     uint16_t index = font_get_index(codepoint);
+    return '?';
+}
 
-//     const uint8_t char_width = Font.char_width ? 
-//         Font.char_width[index] : Font.width;
+char ssd1306_WriteStringUTF8(const char* str, SSD1306_Font_t Font, SSD1306_COLOR color) {
 
-//     if (SSD1306_WIDTH < (SSD1306.CurrentX + char_width) ||
-//         SSD1306_HEIGHT < (SSD1306.CurrentY + Font.height)) {
-//         return 0;
-//     }
+    while (*str) {
+        uint16_t code = utf8_decode(&str);
+        uint8_t ch = unicode_to_font_index(code);
 
-//     for(i = 0; i < Font.height; i++) {
-//         b = Font.data[index * Font.height + i];
+        if (ssd1306_WriteChar(ch, Font, color) != ch) {
+            return ch;
+        }
+    }
 
-//         for(j = 0; j < char_width; j++) {
-//             if((b << j) & 0x8000) {
-//                 ssd1306_DrawPixel(
-//                     SSD1306.CurrentX + j,
-//                     SSD1306.CurrentY + i,
-//                     color
-//                 );
-//             } else {
-//                 ssd1306_DrawPixel(
-//                     SSD1306.CurrentX + j,
-//                     SSD1306.CurrentY + i,
-//                     !color
-//                 );
-//             }
-//         }
-//     }
-
-//     SSD1306.CurrentX += char_width;
-//     return 1;
-// }
-
-// void ssd1306_WriteStringUTF8(const char *str, SSD1306_Font_t Font, SSD1306_COLOR color) {
-//     while (*str) {
-//         uint32_t codepoint = utf8_decode(&str);
-//         ssd1306_WriteGlyph(codepoint, Font, color);
-//     }
-// }
-
+    return 0;
+}
 
 /* Position the cursor */
 void ssd1306_SetCursor(uint8_t x, uint8_t y) {
