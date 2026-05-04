@@ -316,6 +316,45 @@ static uint8_t unicode_to_font_index(uint16_t code) {
     if (code == 0x0451)
         return 184;
 
+    // ===== Французские символы (Latin-1) =====
+    switch (code) {
+        case 0x00C0: return 192; // À
+        case 0x00C2: return 194; // Â
+        case 0x00C4: return 196; // Ä
+        case 0x00C6: return 198; // Æ
+        case 0x00C7: return 199; // Ç
+        case 0x00C9: return 201; // É
+        case 0x00C8: return 200; // È
+        case 0x00CA: return 202; // Ê
+        case 0x00CB: return 203; // Ë
+        case 0x00CE: return 206; // Î
+        case 0x00CF: return 207; // Ï
+        case 0x00D4: return 212; // Ô
+        case 0x0152: return 140; // Œ
+        case 0x00D9: return 217; // Ù
+        case 0x00DB: return 219; // Û
+        case 0x00DC: return 220; // Ü
+        case 0x0178: return 159; // Ÿ
+
+        case 0x00E0: return 224; // à
+        case 0x00E2: return 226; // â
+        case 0x00E4: return 228; // ä
+        case 0x00E6: return 230; // æ
+        case 0x00E7: return 231; // ç
+        case 0x00E9: return 233; // é
+        case 0x00E8: return 232; // è
+        case 0x00EA: return 234; // ê
+        case 0x00EB: return 235; // ë
+        case 0x00EE: return 238; // î
+        case 0x00EF: return 239; // ï
+        case 0x00F4: return 244; // ô
+        case 0x0153: return 156; // œ
+        case 0x00F9: return 249; // ù
+        case 0x00FB: return 251; // û
+        case 0x00FC: return 252; // ü
+        case 0x00FF: return 255; // ÿ
+    }
+
     return '?';
 }
 

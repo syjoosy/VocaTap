@@ -452,7 +452,7 @@ static const uint16_t Font10x12 [] = {
 0x0000,0x0000,0x0000,0x0000,0x0000,0x3800,0x4800,0x3800,0x2800,0x2800,0x0000,0x0000,
 };
 
-static const uint8_t char_width[] = {
+static const uint8_t russian_width[] = {
   3,  /**   **/
   3,  /** ! **/
   4,  /** " **/
@@ -680,4 +680,4 @@ static const uint8_t char_width[] = {
 };
 
 /** Generated Roboto Condensed Light 10 */
-const SSD1306_Font_t Font_10x12a = {10, 12, Font10x12, char_width};
+const SSD1306_Font_t russian = {10, 12, Font10x12, russian_width};

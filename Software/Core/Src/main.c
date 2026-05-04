@@ -26,6 +26,7 @@
 #include "./oled/ssd1306.h"
 #include "./oled/ssd1306_fonts.h"
 #include "./oled/russian.h"
+#include "./oled/french.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -128,16 +129,13 @@ int main(void)
     ssd1306_WriteString("W25QXX ERROR!", Font_6x8, White);
   }
   ssd1306_UpdateScreen();
-  // ssd1306_SetCursor(2, 25);
-  // ssd1306_WriteString("Je tâchera", Font_8x9a, White);
-  // ssd1306_UpdateScreen();
-  ssd1306_SetCursor(2, 35);
 
-  // ssd1306_WriteStringUTF8("Жё та́шрэ", Font_7x10, White);
-  // ssd1306_WriteString("Проверка! Хороший шрифт!", Font_10x12a, White);
-  ssd1306_WriteStringUTF8("Проверка! Хороший шрифт!", Font_10x12a, White);
+  ssd1306_SetCursor(2, 25);
+  ssd1306_WriteStringUTF8("Je tâchera", french, White);
+  ssd1306_UpdateScreen();
 
-
+  ssd1306_SetCursor(2, 45);
+  ssd1306_WriteStringUTF8("Проверка!", russian, White);
   ssd1306_UpdateScreen();
   /* USER CODE END 2 */
 
