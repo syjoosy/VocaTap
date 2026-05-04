@@ -57,6 +57,8 @@ void Error_Handler(void);
 /* USER CODE END EFP */
 
 /* Private defines -----------------------------------------------------------*/
+#define BTN_SLEEP_Pin GPIO_PIN_0
+#define BTN_SLEEP_GPIO_Port GPIOA
 #define BATTERY_Pin GPIO_PIN_3
 #define BATTERY_GPIO_Port GPIOA
 #define FLASH_CS_Pin GPIO_PIN_4
@@ -69,8 +71,6 @@ void Error_Handler(void);
 #define BTN_OK_GPIO_Port GPIOB
 #define BTN_UP_Pin GPIO_PIN_14
 #define BTN_UP_GPIO_Port GPIOB
-#define BTN_SLEEP_Pin GPIO_PIN_9
-#define BTN_SLEEP_GPIO_Port GPIOB
 
 /* USER CODE BEGIN Private defines */
 
