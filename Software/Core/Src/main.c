@@ -113,20 +113,42 @@ int main(void)
   MX_I2C1_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
-
-  W25qxx_Init();
   
   ssd1306_Init();
 
+  // ssd1306_Fill(Black);
+  // ssd1306_SetCursor(1, 10);
+  // ssd1306_WriteString("__     __             _____           ", Font_6x8, White);
+
+  // ssd1306_SetCursor(1, 20);
+  // ssd1306_WriteString("\\ \\   / /__   ___ __ |_   _|_ _ _ __  ", Font_6x8, White);
+
+  // ssd1306_SetCursor(1, 30);
+  // ssd1306_WriteString(" \\ \\ / / _ \\ / __/ _` || |/ _` | '_ \\ ", Font_6x8, White);
+
+  // ssd1306_SetCursor(1, 40);
+  // ssd1306_WriteString("  \\ V / (_) | (_| (_| || | (_| | |_) |", Font_6x8, White);
+
+  // ssd1306_SetCursor(1, 50);
+  // ssd1306_WriteString("   \\_/ \\___/ \\___\\__,_||_|\\__,_| .__/ ", Font_6x8, White);
+
+  // ssd1306_SetCursor(1, 60);
+  // ssd1306_WriteString("                               |_|    ", Font_6x8, White);
+
+  // ssd1306_UpdateScreen();
+
+  // HAL_Delay(3000);
+  W25qxx_Init();
   ssd1306_Fill(Black);
+  
   ssd1306_SetCursor(2, 10);
   if (CheckW25qxxConnection() == 1)
   {
-    ssd1306_WriteString("W25QXX OK!", Font_6x8, White);
+    // ssd1306_WriteString("W25QXX OK!", Font_6x8, White);
   }
   else
   {
-    ssd1306_WriteString("W25QXX ERROR!", Font_6x8, White);
+    // ssd1306_WriteString("W25QXX ERROR!", Font_6x8, White);
   }
   ssd1306_UpdateScreen();
 
@@ -135,7 +157,8 @@ int main(void)
   ssd1306_UpdateScreen();
 
   ssd1306_SetCursor(2, 45);
-  ssd1306_WriteStringUTF8("Проверка!", russian, White);
+  ssd1306_WriteStringUTF8("Test", french, White);
+  // ssd1306_WriteStringUTF8("Проверка!", russian, White);
   ssd1306_UpdateScreen();
   /* USER CODE END 2 */
 
