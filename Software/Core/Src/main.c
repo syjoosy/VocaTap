@@ -153,7 +153,7 @@ int main(void)
   ssd1306_UpdateScreen();
 
   ssd1306_SetCursor(2, 25);
-  ssd1306_WriteStringUTF8("Je tâchera", french, White);
+  ssd1306_WriteString("Je tâchera", french, White);
   ssd1306_UpdateScreen();
 
   ssd1306_SetCursor(2, 45);
