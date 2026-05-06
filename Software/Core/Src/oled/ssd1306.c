@@ -227,7 +227,7 @@ char ssd1306_WriteChar(char ch, SSD1306_Font_t Font, SSD1306_COLOR color) {
     
     // Char width is not equal to font width for proportional font
     const uint8_t char_width = Font.char_width ? Font.char_width[ch-32] : Font.width;
-    // uint8_t char_width = Font.char_width[ch-32];
+    //uint8_t char_width = Font.char_width[ch];
     // Check remaining space on current line
     if (SSD1306_WIDTH < (SSD1306.CurrentX + char_width) ||
         SSD1306_HEIGHT < (SSD1306.CurrentY + Font.height))
