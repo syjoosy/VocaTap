@@ -116,39 +116,39 @@ int main(void)
   
   ssd1306_Init();
 
-  // ssd1306_Fill(Black);
-  // ssd1306_SetCursor(1, 10);
-  // ssd1306_WriteString("__     __             _____           ", Font_6x8, White);
+  ssd1306_Fill(Black);
+  ssd1306_SetCursor(1, 10);
+  ssd1306_WriteString("__     __             _____           ", Font_6x8, White);
 
-  // ssd1306_SetCursor(1, 20);
-  // ssd1306_WriteString("\\ \\   / /__   ___ __ |_   _|_ _ _ __  ", Font_6x8, White);
+  ssd1306_SetCursor(1, 20);
+  ssd1306_WriteString("\\ \\   / /__   ___ __ |_   _|_ _ _ __  ", Font_6x8, White);
 
-  // ssd1306_SetCursor(1, 30);
-  // ssd1306_WriteString(" \\ \\ / / _ \\ / __/ _` || |/ _` | '_ \\ ", Font_6x8, White);
+  ssd1306_SetCursor(1, 30);
+  ssd1306_WriteString(" \\ \\ / / _ \\ / __/ _` || |/ _` | '_ \\ ", Font_6x8, White);
 
-  // ssd1306_SetCursor(1, 40);
-  // ssd1306_WriteString("  \\ V / (_) | (_| (_| || | (_| | |_) |", Font_6x8, White);
+  ssd1306_SetCursor(1, 40);
+  ssd1306_WriteString("  \\ V / (_) | (_| (_| || | (_| | |_) |", Font_6x8, White);
 
-  // ssd1306_SetCursor(1, 50);
-  // ssd1306_WriteString("   \\_/ \\___/ \\___\\__,_||_|\\__,_| .__/ ", Font_6x8, White);
+  ssd1306_SetCursor(1, 50);
+  ssd1306_WriteString("   \\_/ \\___/ \\___\\__,_||_|\\__,_| .__/ ", Font_6x8, White);
 
-  // ssd1306_SetCursor(1, 60);
-  // ssd1306_WriteString("                               |_|    ", Font_6x8, White);
+  ssd1306_SetCursor(1, 60);
+  ssd1306_WriteString("                               |_|    ", Font_6x8, White);
 
-  // ssd1306_UpdateScreen();
+  ssd1306_UpdateScreen();
 
-  // HAL_Delay(3000);
+  HAL_Delay(3000);
   W25qxx_Init();
   ssd1306_Fill(Black);
   
   ssd1306_SetCursor(2, 10);
   if (CheckW25qxxConnection() == 1)
   {
-    // ssd1306_WriteString("W25QXX OK!", Font_6x8, White);
+    ssd1306_WriteString("W25QXX OK!", Font_6x8, White);
   }
   else
   {
-    // ssd1306_WriteString("W25QXX ERROR!", Font_6x8, White);
+    ssd1306_WriteString("W25QXX ERROR!", Font_6x8, White);
   }
   ssd1306_UpdateScreen();
 
@@ -394,11 +394,11 @@ static void MX_GPIO_Init(void)
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(FLASH_CS_GPIO_Port, FLASH_CS_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pin : BTN_SLEEP_Pin */
-  GPIO_InitStruct.Pin = BTN_SLEEP_Pin;
+  /*Configure GPIO pins : BTN_SLEEP_Pin CHRG_Pin */
+  GPIO_InitStruct.Pin = BTN_SLEEP_Pin|CHRG_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
-  HAL_GPIO_Init(BTN_SLEEP_GPIO_Port, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
   /*Configure GPIO pin : FLASH_CS_Pin */
   GPIO_InitStruct.Pin = FLASH_CS_Pin;

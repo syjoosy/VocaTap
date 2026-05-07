@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define BTN_SLEEP_Pin GPIO_PIN_0
 #define BTN_SLEEP_GPIO_Port GPIOA
+#define CHRG_Pin GPIO_PIN_2
+#define CHRG_GPIO_Port GPIOA
 #define BATTERY_Pin GPIO_PIN_3
 #define BATTERY_GPIO_Port GPIOA
 #define FLASH_CS_Pin GPIO_PIN_4
