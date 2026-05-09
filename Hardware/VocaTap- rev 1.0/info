@@ -1,0 +1,404 @@
+{
+  "uuid": "ea73751eded59220f67e691a0d5ddf53",
+  "path": "Offline/VocaTap-%20rev%201.0",
+  "name": "VocaTap- rev 1.0",
+  "content": "",
+  "created_at": "2026-05-07 15:40:17",
+  "updated_at": "2026-05-07 18:11:13",
+  "stick": "",
+  "documents": [
+    {
+      "uuid": "47d618700c2682a126060364c5b2fb89",
+      "title": "Sheet_1",
+      "description": "",
+      "docType": "1",
+      "master": "",
+      "thumb": "/images/thumb-default.png",
+      "components": {
+        "3d5eb5c0a4b3417eab49ac5cea63c6bc": 1,
+        "24eeb2ceca08480b92b847b6a310acda": 11,
+        "5cbe824183374fac8e4c1ae848199ce3": 1,
+        "bb009484ef804a24ac5d18c54b249586": 11,
+        "77faa596f62d4767a964ef111dd2ed7b": 1,
+        "052bd9450aa44163864027b7d4ceb53a": 1,
+        "0217a5c014784d3ab570a456c353297a": 1,
+        "f602b3d1ab4d402b850a50d5909570b2": 1,
+        "52208860a87040768bb69a39d413d0f1": 1,
+        "cc1fa5a0f8084e0880a420b7308dccb5": 1,
+        "c2badbc65405407c802ae70b39eea58e": 1,
+        "47d49c5869df4982954bb5cf054a7e55": 1,
+        "d3935ad33f4d4153b0e02d8eafa8f55f": 6,
+        "6a61f3e12e404cada94b3a0b5881ffbb": 1,
+        "6c78b5029f864247b49a4e2d5fb9e94e": 1
+      },
+      "BOM": [
+        [
+          "Value",
+          "Quantity",
+          "Package",
+          "Components",
+          "CustomPara"
+        ],
+        [
+          "KLS7-TS3401- 2.5-180 (TVAF11)",
+          6,
+          "KLS7-TS3401- 2.5-180 (TVAF11)",
+          "BACK,BOOT,DOWN,OK,RST,UP",
+          {
+            "Manufacturer": "",
+            "Manufacturer Part": "KLS7-TS3401- 2.5-180 (TVAF11)",
+            "Supplier Part": "",
+            "Supplier": "",
+            "link": "https://www.chipdip.ru/product/kls7-ts3401-2-5-180-tvaf11",
+            "Contributor": "seldomorama",
+            "spiceSymbolName": "KLS7-TS3401- 2.5-180 (TVAF11)",
+            "puuid": "0080ea08925d4ce9a5db7a5b0f8ee6b5",
+            "uuid": "d3935ad33f4d4153b0e02d8eafa8f55f"
+          }
+        ],
+        [
+          "XD-1.25-2PWT",
+          1,
+          "CONN-SMD_2P-P1.25-XUNDA-1.25-2PWT",
+          "BAT1",
+          {
+            "Supplier": "LCSC",
+            "Supplier Part": "C17700350",
+            "Manufacturer": "XUNDA(讯答)",
+            "Manufacturer Part": "XD-1.25-2PWT",
+            "JLCPCB Part Class": "Extended Part",
+            "Contributor": "lcsc",
+            "link": "https://lcsc.com/eda_search?q=C17700350&%26type=1&ref=editor",
+            "spiceSymbolName": "XD-1.25-2PWT",
+            "puuid": "96b919e33447458fa933f33bff64b737",
+            "uuid": "052bd9450aa44163864027b7d4ceb53a"
+          }
+        ],
+        [
+          "1uF",
+          1,
+          "C0603",
+          "C1",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "C_0603_US",
+            "Manufacturer Part": "",
+            "puuid": "f8151fdc728a41ebbc304e11d39e5437",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "12pF",
+          4,
+          "C0603",
+          "C9,C10,C11,C12",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "C_0603_US",
+            "Manufacturer Part": "",
+            "puuid": "f8151fdc728a41ebbc304e11d39e5437",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "0.1uF",
+          3,
+          "C0603",
+          "C17,C18,C19",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "C_0603_US",
+            "Manufacturer Part": "",
+            "puuid": "f8151fdc728a41ebbc304e11d39e5437",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "20pF",
+          3,
+          "C0603",
+          "C33,C34,C35",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "C_0603_US",
+            "Manufacturer Part": "",
+            "puuid": "f8151fdc728a41ebbc304e11d39e5437",
+            "uuid": "24eeb2ceca08480b92b847b6a310acda"
+          }
+        ],
+        [
+          "LED-0603_R",
+          1,
+          "LED0603_RED",
+          "CHARGING1",
+          {
+            "Manufacturer": "EVERLIGHT(台湾亿光)",
+            "Manufacturer Part": "19-217/R6C-AL1M2VY/3T",
+            "Supplier Part": "C72044",
+            "Supplier": "LCSC",
+            "link": "",
+            "Contributor": "LCEDA_01",
+            "spiceSymbolName": "LED-0603_R",
+            "puuid": "1efb3a885b5b4aecb6d41221a8f4d86b",
+            "uuid": "5cbe824183374fac8e4c1ae848199ce3"
+          }
+        ],
+        [
+          "1.3 OLED 4PIN",
+          1,
+          "1.3OLED_4P",
+          "OLED1",
+          {
+            "Manufacturer": "",
+            "Manufacturer Part": "",
+            "Supplier Part": "",
+            "Supplier": "",
+            "link": "",
+            "Contributor": "parcoyeung",
+            "spiceSymbolName": "1.3 OLED 4PIN",
+            "puuid": "67db84cf62c742968408efd37ac285b1",
+            "uuid": "47d49c5869df4982954bb5cf054a7e55"
+          }
+        ],
+        [
+          "A127UP-ZD04P",
+          1,
+          "HDR-TH_4P-P1.27-V-M",
+          "PROG1",
+          {
+            "Supplier": "LCSC",
+            "Supplier Part": "C41366759",
+            "Manufacturer": "BXCONN(宝讯)",
+            "Manufacturer Part": "A127UP-ZD04P",
+            "JLCPCB Part Class": "Extended Part",
+            "Contributor": "lcsc",
+            "link": "https://lcsc.com/eda_search?q=C41366759&%26type=1&ref=editor",
+            "3DModel": "HDR-TH_4P-P1.27-M-LI-1X4P",
+            "spiceSymbolName": "A127UP-ZD04P",
+            "puuid": "29133c71fa564aaea7b99b129de2b052",
+            "uuid": "0217a5c014784d3ab570a456c353297a"
+          }
+        ],
+        [
+          "10K",
+          5,
+          "R0603",
+          "R1,R2,R9,R10,R24",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "R_0603_EU",
+            "Manufacturer Part": "",
+            "puuid": "398691f1f785460098bbe5ee6590333c",
+            "uuid": "bb009484ef804a24ac5d18c54b249586"
+          }
+        ],
+        [
+          "5.1K",
+          2,
+          "R0603",
+          "R7,R13",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "R_0603_EU",
+            "Manufacturer Part": "",
+            "puuid": "398691f1f785460098bbe5ee6590333c",
+            "uuid": "bb009484ef804a24ac5d18c54b249586"
+          }
+        ],
+        [
+          "1K",
+          3,
+          "R0603",
+          "R8,R12,R25",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "R_0603_EU",
+            "Manufacturer Part": "",
+            "puuid": "398691f1f785460098bbe5ee6590333c",
+            "uuid": "bb009484ef804a24ac5d18c54b249586"
+          }
+        ],
+        [
+          "1M",
+          1,
+          "R0603",
+          "R11",
+          {
+            "Supplier Part": "",
+            "Supplier": "",
+            "Contributor": "LCEDA_Lib",
+            "spiceSymbolName": "R_0603_EU",
+            "Manufacturer Part": "",
+            "puuid": "398691f1f785460098bbe5ee6590333c",
+            "uuid": "bb009484ef804a24ac5d18c54b249586"
+          }
+        ],
+        [
+          "RESN_EXB-38V-10K,5%",
+          1,
+          "RES-ARRAY-SMD_0603-8P-L3.2-W1.6-BL",
+          "R23",
+          {
+            "Contributor": "lcsc",
+            "Supplier": "LCSC",
+            "Supplier Part": "C9900011211",
+            "Manufacturer": "null",
+            "Manufacturer Part": "RESN_EXB-38V-22R,5%",
+            "JLCPCB Part Class": "Extended Part",
+            "link": "https://lcsc.com/eda_search?q=C9900011211&%26type=1&ref=editor",
+            "3DModel": "R0603-8P_L3.2-W1.6-H0.6",
+            "spiceSymbolName": "RESN_EXB-38V-22R,5%",
+            "puuid": "109e5b24485d430f95eaa4f2fe2ab4f9",
+            "uuid": "cc1fa5a0f8084e0880a420b7308dccb5"
+          }
+        ],
+        [
+          "ZX-QC4545-4.5BSJ",
+          1,
+          "KEY-TH_3P-L4.5-W4.3-P3.00",
+          "SLEEP",
+          {
+            "Supplier": "LCSC",
+            "Supplier Part": "C7470179",
+            "Manufacturer": "Megastar(兆星)",
+            "Manufacturer Part": "ZX-QC4545-4.5BSJ",
+            "link": "https://lcsc.com/eda_search?q=C7470179&%26type=1&ref=editor",
+            "Contributor": "lcsc",
+            "JLCPCB Part Class": "Extended Part",
+            "3DModel": "KEY-TH_3P-L4.5-W4.3-H4.5-P3.00",
+            "spiceSymbolName": "ZX-QC4545-4.5BSJ",
+            "puuid": "8ebf979451f14250b623171149a7f3e2",
+            "uuid": "6a61f3e12e404cada94b3a0b5881ffbb"
+          }
+        ],
+        [
+          "STM32G431CBT6",
+          1,
+          "LQFP-48_L7.0-W7.0-P0.50-LS9.0-BL",
+          "U1",
+          {
+            "Contributor": "LCSC",
+            "Supplier": "LCSC",
+            "Supplier Part": "C529355",
+            "Manufacturer": "ST(意法半导体)",
+            "Manufacturer Part": "STM32G431CBT6",
+            "JLCPCB Part Class": "Extended Part",
+            "link": "https://lcsc.com/eda_search?q=C529355&%26type=1&ref=editor",
+            "spiceSymbolName": "STM32G431CBT6",
+            "puuid": "4a13c433861640209b7106f419770da9",
+            "uuid": "3d5eb5c0a4b3417eab49ac5cea63c6bc"
+          }
+        ],
+        [
+          "W25Q128FVSIG_C571265",
+          1,
+          "SOIC-8_L5.3-W5.3-P1.27-LS7.9-BL",
+          "U5",
+          {
+            "Contributor": "LCSC",
+            "Supplier": "LCSC",
+            "Supplier Part": "C571265",
+            "Manufacturer": "WINBOND(华邦)",
+            "Manufacturer Part": "W25Q128FVSIG",
+            "JLCPCB Part Class": "Extended Part",
+            "link": "https://lcsc.com/eda_search?q=C571265&%26type=1&ref=editor",
+            "spiceSymbolName": "W25Q128FVSIG_C571265",
+            "puuid": "6a43042e9e154ccd8b23b9f60ee97aa5",
+            "uuid": "c2badbc65405407c802ae70b39eea58e"
+          }
+        ],
+        [
+          "CHARGER-0633",
+          1,
+          "TSOT-23-6_L2.9-W1.6-P0.95-LS2.8-BL",
+          "U15",
+          {
+            "Contributor": "lcsc",
+            "Supplier": "LCSC",
+            "Supplier Part": "C5447151",
+            "Manufacturer": "TOPPOWER(南京拓微)",
+            "Manufacturer Part": "TP4067-3.70V-SOT26-R",
+            "JLCPCB Part Class": "Extended Part",
+            "link": "https://lcsc.com/eda_search?q=C5447151&%26type=1&ref=editor",
+            "spiceSymbolName": "TP4067-3.70V-SOT26-R",
+            "puuid": "23cf1b8230b141d2ab1ad311fbeede37",
+            "uuid": "77faa596f62d4767a964ef111dd2ed7b"
+          }
+        ],
+        [
+          "TYPE-C 16P QTWT",
+          1,
+          "USB-TYPE-C-SMD_TYPE-C-16P-QTWT",
+          "USB1",
+          {
+            "Contributor": "lcsc",
+            "Supplier": "LCSC",
+            "Supplier Part": "C5187472",
+            "Manufacturer": "SHOU HAN(首韩)",
+            "Manufacturer Part": "TYPE-C 16P QTWT",
+            "JLCPCB Part Class": "Extended Part",
+            "link": "https://lcsc.com/eda_search?q=C5187472&%26type=1&ref=editor",
+            "spiceSymbolName": "TYPE-C 16P QTWT",
+            "puuid": "72af86f709ad4dd7b8d89695906e6b29",
+            "uuid": "6c78b5029f864247b49a4e2d5fb9e94e"
+          }
+        ],
+        [
+          "XTAL2016",
+          1,
+          "2016_XTAL",
+          "X1",
+          {
+            "Contributor": "gianni2009",
+            "spiceSymbolName": "XTAL2016",
+            "Manufacturer Part": "",
+            "puuid": "c25256daae824407995e8a714f594076",
+            "uuid": "52208860a87040768bb69a39d413d0f1"
+          }
+        ],
+        [
+          "32.768kHz",
+          1,
+          "OSC-SMD_L3.2-W1.5",
+          "X2",
+          {
+            "Contributor": "LCSC",
+            "Supplier": "LCSC",
+            "Supplier Part": "C156245",
+            "Manufacturer": "NDK",
+            "Manufacturer Part": "NX3215SA-32.768K-STD-MUA-8",
+            "JLCPCB Part Class": "Extended Part",
+            "link": "https://lcsc.com/eda_search?q=C156245&%26type=1&ref=editor",
+            "spiceSymbolName": "NX3215SA-32.768KHZ(STD-MUA-8)",
+            "puuid": "45db180873d642278c39de0d6e7e5473",
+            "uuid": "f602b3d1ab4d402b850a50d5909570b2"
+          }
+        ]
+      ],
+      "updateTime": 1778166673,
+      "createTime": 1778157618,
+      "histories": [],
+      "created_at": "2026-05-07 15:40:18",
+      "updated_at": "2026-05-07 18:11:13"
+    }
+  ],
+  "sort": [],
+  "title": "VocaTap- rev 1.0",
+  "foldername": "VocaTap- rev 1.0",
+  "schfilename": "VocaTap- rev 1.0.json",
+  "schfilemtime": 1778166673127
+}
