@@ -4,7 +4,7 @@
   "name": "VocaTap- rev 1.0",
   "content": "",
   "created_at": "2026-05-07 15:40:17",
-  "updated_at": "2026-05-11 17:38:37",
+  "updated_at": "2026-05-11 17:45:36",
   "stick": "",
   "documents": [
     {
@@ -18,7 +18,7 @@
         "3d5eb5c0a4b3417eab49ac5cea63c6bc": 1,
         "24eeb2ceca08480b92b847b6a310acda": 11,
         "5cbe824183374fac8e4c1ae848199ce3": 1,
-        "bb009484ef804a24ac5d18c54b249586": 11,
+        "bb009484ef804a24ac5d18c54b249586": 13,
         "77faa596f62d4767a964ef111dd2ed7b": 1,
         "052bd9450aa44163864027b7d4ceb53a": 1,
         "0217a5c014784d3ab570a456c353297a": 1,
@@ -189,9 +189,9 @@
         ],
         [
           "10K",
-          5,
+          7,
           "R0603",
-          "R1,R2,R9,R10,R24",
+          "R1,R2,R3,R4,R9,R10,R24",
           {
             "Supplier Part": "",
             "Supplier": "",
@@ -389,16 +389,16 @@
           }
         ]
       ],
-      "updateTime": 1778510317,
+      "updateTime": 1778510736,
       "createTime": 1778157618,
       "histories": [],
       "created_at": "2026-05-07 15:40:18",
-      "updated_at": "2026-05-11 17:38:37"
+      "updated_at": "2026-05-11 17:45:36"
     }
   ],
   "sort": [],
   "title": "VocaTap- rev 1.0",
   "foldername": "VocaTap- rev 1.0",
   "schfilename": "VocaTap- rev 1.0.json",
-  "schfilemtime": 1778510318026
+  "schfilemtime": 1778510736257
 }
